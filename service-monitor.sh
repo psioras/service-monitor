@@ -6,6 +6,7 @@ LOG_DIR="${SCRIPT_DIR}/logs"
 source "${SCRIPT_DIR}/.env"
 
 mkdir -p "${LOG_DIR}"
+find "${LOG_DIR}" -name "*.log" -mtime +7 -delete
 LOG_FILE="${LOG_DIR}/service-monitor-$(date +%F).log"
 
 log() {
