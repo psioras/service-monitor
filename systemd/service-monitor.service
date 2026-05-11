@@ -1,0 +1,11 @@
+[Unit]
+Description=Script that monitors services by checking their docker containers health
+
+[Service]
+User=psioras
+Group=psioras
+Type=oneshot
+ExecStart=/home/psioras/projects/service-monitor/service-monitor.sh
+
+[Install]
+WantedBy=multi-user.target
